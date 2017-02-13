@@ -18,7 +18,7 @@ https://github.com/ARWL2016/ps-webpack-eames-2
 
 ---
 ####Adding CSS to the Build  
-Conventionally, we include css with a link ref inside `index.html`. But with webpack, we can include css in the js module system using a require statement and loaders. App.js becomes the root of our project instead of index.html. But webpack will inject our css files into the index.html and the `<link>` tags will appear in the browser.    
+Conventionally, we include css with a link ref inside `index.html`. But with webpack, we can include css in the js module system using a require statement and loaders. App.js becomes the root of our project instead of index.html. But webpack will inject our css files into the index.html head (but see below for alternative) and the `<link>` tags will appear in the browser.    
 1. `npm install style-loader css-loader --save-dev`  
 2. remove style links from `index.html`  
 3. In `webpack.config` under `module.rules` create a new loader object as before, with test, exclude and loader properties.  
@@ -34,6 +34,24 @@ Conventionally, we include css with a link ref inside `index.html`. But with web
 4. Set `loader: "style-loader!css-loader!sass-loader"`. Hence, scss files will get passed through the sass-loader and then the css-loader 5. Nb. This method includes everything in the bundle, so we don't get to view the css output    
 
 ####Less Support 
-This is identical to Sass, except that we use `less loader` and the extension is `.less`  
+This is identical to Sass, except that we use `less loader` and the extension is `.less` 
 
+--- 
+####Creating a Separate CSS bundle
+
+See `webpack-seperate-css.config.js`  
+IMPORTANT: Cannot make this function and this package may be incompatible with Webpack 2. `Error: Chunk.entry was removed. Use hasRuntime()`. But the course method is this: 
+
+1. `npm install extract-text-webpack-plugin --save-dev`  
+2. in `webpack.config` require the package in (1)  
+3. Since this is supposed to output two files, we change the public path to `/public/assets` - remove the `js` folder  
+4. define a plugin using a function from the package  
+5. redefine the module loaders using the same `ExtractTextPlugin` function  
+6. In `index.html` restore the css link to the publicPath: `<link rel="stylesheet" href="/public/assets/styles.css">` and:   
+7. Alter the script link also: `<script src="/public/assets/bundle.js"></script>`  
+
+---
+####Adding Autoprefixer-Loader 
+1. `npm install autoprefixer-loader --save-dev`  
+2. In `webpack.config` chain this loader after scss but before css, e.g: `loader: "style-loader!css-loader!autoprefixer-loader!sass-loader" `  
 
