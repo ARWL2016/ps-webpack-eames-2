@@ -1,5 +1,4 @@
 ## Webpack Fundamentals   
-
 ###Part 2: CSS
 
 https://app.pluralsight.com/player?course=webpack-fundamentals&author=joe-eames&name=webpack-fundamentals-m1&clip=3&mode=live   
@@ -11,11 +10,13 @@ https://github.com/ARWL2016/ps-webpack-eames-2
 
 ####Packages  
 1. webpack (-g)  
-2. webpack-dev-server (-g) - with hot reloading   
+2. webpack-dev-server (-g)  
+3. css-loader
+4. style-loader   
 
 ---
 ####Adding CSS to the Build  
-*Conventionally, we include css with a link ref inside `index.html`. But with webpack, we can include css in the js module system using a require statement and loaders. App.js becomes the root of our project instead of index.html.* 
+*Conventionally, we include css with a link ref inside `index.html`. But with webpack, we can include css in the js module system using a require statement and loaders. App.js becomes the root of our project instead of index.html.*   
 1. `npm install style-loader css-loader --save-dev`  
 2. remove style links from `index.html`  
 3. In `webpack.config` under `module.rules` create a new loader object as before, with test, exclude and loader properties.  
