@@ -22,7 +22,7 @@ Conventionally, we include css with a link ref inside `index.html`. But with web
 1. `npm install style-loader css-loader --save-dev`  
 2. remove style links from `index.html`  
 3. In `webpack.config` under `module.rules` create a new loader object as before, with test, exclude and loader properties.  
-4. Set `loader: "style-loader!css-loader"`. The `!` syntax is common in webpack. It will run our css files first through css-loader and then through style-loader. 
+4. Set `loader: "style-loader!css-loader"`. The `!` syntax is common in webpack. It will run our css files first through css-loader and then through style-loader.  
 5. In `app.js`, use a require statement and the path to import the css files. E.g. `require("../css/app.css")` If there is a bootstrap and a local style, we should include bootstrap first.
 6. Nb. running `webpack-dev-server -p` will now minify the js and css. 
 
@@ -31,9 +31,9 @@ Conventionally, we include css with a link ref inside `index.html`. But with web
 1. `npm install sass-loader node-sass --save-dev`  
 2. Change css files to extension `.scss` and update the require statement in `app.js`  
 3. In `webpack.config` add a new loader definition, with test, exclude and loader. 
-4. Set `loader: "style-loader!css-loader!sass-loader"`. Hence, scss files will get passed through the sass-loader and then the css-loader 5. Nb. This method includes everything in the bundle, so we don't get to view the css output   
+4. Set `loader: "style-loader!css-loader!sass-loader"`. Hence, scss files will get passed through the sass-loader and then the css-loader 5. Nb. This method includes everything in the bundle, so we don't get to view the css output    
 
 ####Less Support 
-This is identical to Sass, except that we use `less loader` and the extension is `.less`
+This is identical to Sass, except that we use `less loader` and the extension is `.less`  
 
 
