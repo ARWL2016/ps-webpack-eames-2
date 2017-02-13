@@ -62,5 +62,14 @@ IMPORTANT: Cannot make this function and this package may be incompatible with W
 3. create a tag to contain the element in `index.html`. In this example, this is done conventionally, with a css class, but also with an id which will be grabbed by app.js, using the createElement() function.  
 4. in `app.css` provide a relative url to the image
 5. In `app.js` we can require (import) the image, define its properties, and append it to the DOM (don't like this method)  
-6. In `webpack.config` define the loader   
+6. In `webpack.config` define the loader with test exclude and loader  
+7. Set `loader: 'url-loader?limit=10000'` The `?` introduces a parameter. The limit is the size of the image in bytes which can be sent inline, ie. actually converted and written into the bundle (base64 encoded). Images larger than that will be sent separately and/or will be copied into the build folder (renamed).   
+8. Nb. As previously, different types of output file means we should use `build` for the build folder and `/public/assets/` for the `publicPath`  
+
+--- 
+####Fonts 
+1. These work in the same way as images and use the same two loaders 
+2. Add the local url to the css file like this `src: url('../fonts/Lora-Regular.ttf');` see app.css for full example  
+3. add the file extensions `ttf|eot` to the `test` property of the loaders. The limit can stay the same. 
+4. Fonts are usually too large to write inline  
 
