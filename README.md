@@ -55,3 +55,12 @@ IMPORTANT: Cannot make this function and this package may be incompatible with W
 1. `npm install autoprefixer-loader --save-dev`  
 2. In `webpack.config` chain this loader after scss but before css, e.g: `loader: "style-loader!css-loader!autoprefixer-loader!sass-loader" `  
 
+---
+####Adding Images   
+1. `npm install url-loader file-loader --save-dev`  
+2. add an image folder to the project  
+3. create a tag to contain the element in `index.html`. In this example, this is done conventionally, with a css class, but also with an id which will be grabbed by app.js, using the createElement() function.  
+4. in `app.css` provide a relative url to the image
+5. In `app.js` we can require (import) the image, define its properties, and append it to the DOM (don't like this method)  
+6. In `webpack.config` define the loader   
+
