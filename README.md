@@ -62,5 +62,10 @@ IMPORTANT: Cannot make this function and this package may be incompatible with W
 3. create a tag to contain the element in `index.html`. In this example, this is done conventionally, with a css class, but also with an id which will be grabbed by app.js, using the createElement() function.  
 4. in `app.css` provide a relative url to the image
 5. In `app.js` we can require (import) the image, define its properties, and append it to the DOM (don't like this method)  
-6. In `webpack.config` define the loader   
+6. In `webpack.config` define the loader.    
 
+--- 
+####Deployment  
+1. To deploy without webpack-dev-server, put bundle.js in the public folder and in `index.html` link relatively to it. 
+2. It may be easier to configure the output.path to public so that this happens automatically  
+3. We can also define paths without `path.resolve`. We can use `path: __dirname,` to reference the current folder (ie the root) and `filename: './public/bundle.js'`. See https://github.com/ARWL2016/react-timer/blob/master/webpack.config.js.   
