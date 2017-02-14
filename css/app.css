@@ -1,5 +1,17 @@
+@font-face {
+    font-family: 'Lora'; 
+
+        /*Loaded with url-loader*/
+    src: url('../fonts/Lora-Regular.ttf'); 
+    src: url('../fonts/Lora-Italic.ttf'); 
+    src: url('../fonts/Lora-Bold.ttf'); 
+    src: url('../fonts/Lora-BoldItalic.ttf'); 
+}
+
 body {
     padding-top: 80px;
+    font-family: 'Lora, Helvetica, Arial'; 
+
 }
 
 .navbar {
