@@ -14,7 +14,8 @@ https://github.com/ARWL2016/ps-webpack-eames-2
 3. css-loader
 4. style-loader
 5. sass-loader  
-6. node-sass     
+6. node-sass    
+7. (jQuery)   
 
 ---
 ####Adding CSS to the Build  
@@ -69,3 +70,10 @@ IMPORTANT: Cannot make this function and this package may be incompatible with W
 1. To deploy without webpack-dev-server, put bundle.js in the public folder and in `index.html` link relatively to it. 
 2. It may be easier to configure the output.path to public so that this happens automatically  
 3. We can also define paths without `path.resolve`. We can use `path: __dirname,` to reference the current folder (ie the root) and `filename: './public/bundle.js'`. See https://github.com/ARWL2016/react-timer/blob/master/webpack.config.js.   
+
+####JQuery Plugin   
+1. See `webpack-jquery.config`. Here, `jquery`  is installed as a dependency, so the library is in `node_modules`. 
+2. JQuery should be added as a global. For this purpose, we use plugins rather than loaders. Hence, `index.html` has no jquery link  
+3. In `webpack.config` require webpack  
+4. Define a plugin property by calling `webpack.ProvidePlugin` and define aliases for jquery  
+5. Nb. The webpack library will be included in the bundle  
