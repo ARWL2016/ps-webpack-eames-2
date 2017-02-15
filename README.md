@@ -66,6 +66,7 @@ IMPORTANT: Cannot make this function and this package may be incompatible with W
 6. In `webpack.config` define the loader with test exclude and loader.    
 7. Set `loader: 'url-loader?limit=10000'` The `?` introduces a parameter. The limit is the size of the image in bytes which can be sent inline, ie. actually converted and written into the bundle (base64 encoded). Images larger than that will be sent separately and/or will be copied into the build folder (renamed).   
 8. Nb. As previously, different types of output file means we should use `build` for the build folder and `/public/assets/` for the `publicPath`  
+9. This setup works with webpack-dev-server but fails with http-server, which cannot locate the images in publicPath. To get round this for now, disable the publicPath property and copy the built files, including images, into the public folder. The image file needs to be in the same folder as the bundle.  
 
 --- 
 ####Fonts   
