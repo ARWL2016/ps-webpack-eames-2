@@ -60,10 +60,10 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/public/assets/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 12);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -408,7 +408,7 @@ exports = module.exports = __webpack_require__(0)();
 
 
 // module
-exports.push([module.i, "@font-face {\r\n    font-family: 'Lora'; \r\n\r\n        /*Loaded with url-loader*/\r\n    src: url(" + __webpack_require__(11) + "); \r\n    src: url(" + __webpack_require__(10) + "); \r\n    src: url(" + __webpack_require__(8) + "); \r\n    src: url(" + __webpack_require__(9) + "); \r\n}\r\n\r\nbody {\r\n    padding-top: 80px;\r\n    font-family: 'Lora, Helvetica, Arial'; \r\n\r\n}\r\n\r\n.navbar {\r\n     background-image: -webkit-linear-gradient(top,#007C0C 0,#000C0C 100%);\r\n     background-image: linear-gradient(to bottom,#007C0C 0,#000C0C 100%); \r\n}\r\n\r\n.bg_header_img {\r\n    background: url(" + __webpack_require__(2) + ") -131px 1px no-repeat; \r\n    margin-right: 15px; \r\n    height: 150px; \r\n    width: 150px; \r\n}\r\n\r\nh1 {\r\n    padding: 15px; \r\n\r\n    border: {\r\n        color: red; \r\n        style: solid; \r\n        width: 1px; \r\n    }\r\n}\r\n\r\n", ""]);
+exports.push([module.i, "/*@font-face {\r\n    font-family: 'Lora'; \r\n\r\n        /*Loaded with url-loader*/\r\n    /*src: url('../fonts/Lora-Regular.ttf'); \r\n    src: url('../fonts/Lora-Italic.ttf'); \r\n    src: url('../fonts/Lora-Bold.ttf'); \r\n    src: url('../fonts/Lora-BoldItalic.ttf'); \r\n}\r\n*/\r\n\r\nbody {\r\n    padding-top: 80px;\r\n    font-family: 'Lora, Helvetica, Arial'; \r\n\r\n}\r\n\r\n.navbar {\r\n     background-image: -webkit-linear-gradient(top,#007C0C 0,#000C0C 100%);\r\n     background-image: linear-gradient(to bottom,#007C0C 0,#000C0C 100%); \r\n}\r\n\r\n.bg_header_img {\r\n    background: url(" + __webpack_require__(2) + ") -131px 1px no-repeat; \r\n    margin-right: 15px; \r\n    height: 150px; \r\n    width: 150px; \r\n}\r\n\r\nh1 {\r\n    padding: 15px; \r\n\r\n    border: {\r\n        color: red; \r\n        style: solid; \r\n        width: 1px; \r\n    }\r\n}\r\n\r\n", ""]);
 
 // exports
 
@@ -481,30 +481,6 @@ if(false) {
 
 /***/ }),
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "9f29b0511c09bc963b6439efc1f21d4e.ttf";
-
-/***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "5201370ab48910334f617a477bd54482.ttf";
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "de63b078c6d93a995e6d2d77c3c4e303.ttf";
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "72631269e4dc9b244bfb441ea22188fe.ttf";
-
-/***/ }),
-/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(3);

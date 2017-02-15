@@ -5,7 +5,7 @@ module.exports = {
     entry: ["./app"],
     output: {
         path: path.resolve('build/'),
-        publicPath: '/public/assets/', 
+        // publicPath: '/public/assets/', - disable if not using webpack-dev-server
         filename: "bundle.js" 
     }, 
 
@@ -20,11 +20,11 @@ module.exports = {
                 exclude: /node_modules/, 
                 loader: "style-loader!css-loader!autoprefixer-loader" 
             },
-            // {
-            //    test: /\.scss$/, 
-            //     exclude: /node_modules/, 
-            //     loader: "style-loader!css-loader!autoprefixer-loader!sass-loader"   
-            // }, 
+            {
+               test: /\.scss$/, 
+                exclude: /node_modules/, 
+                loader: "style-loader!css-loader!autoprefixer-loader!sass-loader"   
+            }, 
             {
                 test: /\.(png|jpg|ttf|eot)$/, 
                 exclude: /node_modules/, 
